@@ -145,7 +145,7 @@ export default function Home() {
             </div>
             
             {/* Main Headline */}
-            <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-fade-in-up">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-fade-in-up">
               Transform Your Brand with
               <span className="block text-primary">Creative Excellence</span>
             </h1>
@@ -158,14 +158,18 @@ export default function Home() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in-up delay-300">
-              <Button size="lg" className="text-lg px-10 py-6 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <Zap className="w-5 h-5 mr-2" />
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
+              <Button asChild size="lg" className="text-lg px-10 py-6 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <Link href="/contact">
+                  <Zap className="w-5 h-5 mr-2" />
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-10 py-6 border-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105">
-                <Star className="w-5 h-5 mr-2" />
-                View Our Work
+              <Button asChild variant="outline" size="lg" className="text-lg px-10 py-6 border-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105">
+                <Link href="/portfolio">
+                  <Star className="w-5 h-5 mr-2" />
+                  View Our Work
+                </Link>
               </Button>
             </div>
             
@@ -244,14 +248,18 @@ export default function Home() {
               Ready to transform your brand? Let's discuss your project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-6">
-                <Zap className="w-5 h-5 mr-2" />
-                Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2" />
+              <Button asChild size="lg" className="text-lg px-8 py-6">
+                <Link href="/contact">
+                  <Zap className="w-5 h-5 mr-2" />
+                  Start Your Project
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                <Users className="w-5 h-5 mr-2" />
-                Meet Our Team
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
+                <Link href="/about">
+                  <Users className="w-5 h-5 mr-2" />
+                  Meet Our Team
+                </Link>
               </Button>
             </div>
           </div>
@@ -295,13 +303,17 @@ export default function Home() {
                 Discover our complete portfolio and find inspiration for your next project.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-lg px-8 py-6">
-                  View All Projects
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button asChild size="lg" className="text-lg px-8 py-6">
+                  <Link href="/portfolio">
+                    View All Projects
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                  <Users className="w-5 h-5 mr-2" />
-                  Case Studies
+                <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
+                  <Link href="/portfolio">
+                    <Users className="w-5 h-5 mr-2" />
+                    Case Studies
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -452,7 +464,7 @@ export default function Home() {
             </p>
             <NewsletterForm />
           </div>
-        </div>
+    </div>
       </section>
     </LayoutWrapper>
   );

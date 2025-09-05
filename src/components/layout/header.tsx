@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MobileMenu } from "@/components/ui/mobile-menu";
-import { Github } from "lucide-react";
 
 export function Header() {
 
@@ -44,9 +43,10 @@ export function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button size="sm">
-              <Github className="w-4 h-4 mr-2" />
-              GitHub
+            <Button asChild size="sm">
+              <Link href="/contact">
+                Get Started
+              </Link>
             </Button>
           </div>
 
@@ -68,9 +68,10 @@ export function Header() {
               
               
               <div className="px-3 py-2">
-                <Button size="sm" className="w-full">
-                  <Github className="w-4 h-4 mr-2" />
-                  GitHub
+                <Button asChild size="sm" className="w-full">
+                  <Link href="/contact">
+                    Get Started
+                  </Link>
                 </Button>
               </div>
             </div>

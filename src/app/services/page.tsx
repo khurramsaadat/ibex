@@ -371,7 +371,7 @@ export default function Services() {
               <Heart className="w-4 h-4 mr-2" />
               Our Services
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Design Services That
               <span className="block text-primary">Drive Results</span>
             </h1>
