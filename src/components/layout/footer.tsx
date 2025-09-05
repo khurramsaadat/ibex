@@ -76,9 +76,9 @@ export function Footer() {
               <Image 
                 src="/logo.svg" 
                 alt="IBEX Design" 
-                width={96} 
-                height={96}
-                className="h-24 w-24 brightness-0 invert"
+                width={120} 
+                height={120}
+                className="h-30 w-30 brightness-0 invert"
               />
             </div>
             <p className="text-teal-100 text-sm leading-relaxed">
