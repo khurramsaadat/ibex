@@ -8,7 +8,6 @@ import {
   Github, 
   Linkedin, 
   Instagram, 
-  Twitter, 
   Mail, 
   Phone, 
   MapPin,
@@ -16,6 +15,18 @@ import {
   Palette,
   Users
 } from "lucide-react";
+
+// Custom X (Twitter) icon component
+const XIcon = ({ className }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.318H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -46,12 +57,12 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { name: "LinkedIn", href: "#", icon: Linkedin, color: "hover:text-blue-600" },
-    { name: "Instagram", href: "#", icon: Instagram, color: "hover:text-pink-600" },
-    { name: "Portfolio", href: "#", icon: Palette, color: "hover:text-blue-500" },
-    { name: "Community", href: "#", icon: Users, color: "hover:text-pink-500" },
-    { name: "Twitter", href: "#", icon: Twitter, color: "hover:text-blue-400" },
-    { name: "GitHub", href: "#", icon: Github, color: "hover:text-gray-600" },
+    { name: "LinkedIn", href: "#", icon: Linkedin },
+    { name: "Instagram", href: "#", icon: Instagram },
+    { name: "Portfolio", href: "#", icon: Palette },
+    { name: "Community", href: "#", icon: Users },
+    { name: "X (Twitter)", href: "#", icon: XIcon },
+    { name: "GitHub", href: "#", icon: Github },
   ];
 
   return (
@@ -178,7 +189,7 @@ export function Footer() {
                   <Link
                     key={social.name}
                     href={social.href}
-                    className={`text-teal-200 transition-colors ${social.color}`}
+                    className="text-teal-200 hover:text-white transition-colors"
                     aria-label={social.name}
                   >
                     <Icon className="h-5 w-5" />
