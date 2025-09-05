@@ -242,7 +242,7 @@ export default function Services() {
                     </ul>
                   </div>
                   
-                  <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <Button variant="outline" className="w-full hover:bg-primary/10 hover:text-primary hover:border-primary transition-colors">
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>

@@ -55,7 +55,7 @@ export function PortfolioCard({
         </div>
         <Button
           variant="ghost"
-          className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+          className="w-full hover:bg-primary/10 hover:text-primary transition-colors"
           asChild
         >
           <a href={href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>

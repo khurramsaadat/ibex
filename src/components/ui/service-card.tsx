@@ -45,7 +45,7 @@ export function ServiceCard({
         </ul>
         <Button
           variant="outline"
-          className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors"
+          className="w-full hover:bg-primary/10 hover:text-primary hover:border-primary transition-colors"
           asChild
         >
           <a href={href}>
