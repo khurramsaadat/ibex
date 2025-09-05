@@ -72,15 +72,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center">
               <Image 
                 src="/logo.svg" 
                 alt="IBEX Design" 
-                width={32} 
-                height={32}
-                className="h-8 w-8"
+                width={48} 
+                height={48}
+                className="h-12 w-12"
               />
-              <span className="text-xl font-bold">IBEX Design</span>
             </div>
             <p className="text-teal-100 text-sm leading-relaxed">
               Transforming brands through creative excellence. We specialize in visual design, 

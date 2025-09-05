@@ -22,15 +22,14 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center">
             <Image 
               src="/logo.svg" 
               alt="IBEX Design" 
-              width={40} 
-              height={40}
-              className="h-10 w-10"
+              width={60} 
+              height={60}
+              className="h-15 w-15"
             />
-            <span className="text-xl font-bold">IBEX Design</span>
           </Link>
 
           {/* Desktop Navigation */}
