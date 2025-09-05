@@ -20,15 +20,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-white backdrop-blur supports-[backdrop-filter]:bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image 
               src="/logo.svg" 
               alt="IBEX Design" 
-              width={120} 
-              height={120}
-              className="h-30 w-30"
+              width={140} 
+              height={140}
+              className="h-35 w-35"
             />
           </Link>
 
