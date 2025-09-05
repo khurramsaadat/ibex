@@ -26,9 +26,9 @@ export function Header() {
             <Image 
               src="/logo.svg" 
               alt="IBEX Design" 
-              width={60} 
-              height={60}
-              className="h-15 w-15"
+              width={120} 
+              height={120}
+              className="h-30 w-30"
             />
           </Link>
 
