@@ -67,7 +67,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-600 text-white">
+    <footer className="bg-muted text-foreground">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -81,20 +81,20 @@ export function Footer() {
                 className="h-30 w-30 brightness-0 invert"
               />
             </div>
-            <p className="text-primary-foreground/80 text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Transforming brands through creative excellence. We specialize in visual design, 
               brand identity, and digital experiences that drive business success.
             </p>
             <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-sm text-primary-foreground/80">
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
                 <span>123 Design Street, Creative City, CC 12345</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-primary-foreground/80">
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4" />
                 <span>+1 (555) 123-4567</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-primary-foreground/80">
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4" />
                 <span>hello@ibexdesign.com</span>
               </div>
@@ -109,7 +109,7 @@ export function Footer() {
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-sm text-primary-foreground/80 hover:text-white transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -126,7 +126,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-primary-foreground/80 hover:text-white transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -138,24 +138,24 @@ export function Footer() {
           {/* Newsletter */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Stay Updated</h3>
-            <p className="text-sm text-primary-foreground/80">
+            <p className="text-sm text-muted-foreground">
               Get the latest design insights, industry trends, and project updates.
             </p>
             <form className="space-y-3">
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-sm text-primary-foreground/80">
+                <Label htmlFor="email" className="text-sm text-muted-foreground">
                   Email Address
                 </Label>
                 <Input
                   id="email"
                   type="email"
                   placeholder="Enter your email"
-                  className="bg-white/10 border-white/20 text-white placeholder:text-primary-foreground/60 focus:border-white/40"
+                  className="bg-background border-border text-foreground placeholder:text-muted-foreground focus:border-primary"
                 />
               </div>
               <Button 
                 type="submit" 
-                className="w-full bg-white text-primary hover:bg-primary/10"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 Subscribe
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -165,10 +165,10 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-12 pt-8 border-t border-white/20">
+        <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             {/* Copyright */}
-            <div className="text-sm text-primary-foreground/60">
+            <div className="text-sm text-muted-foreground">
               © {currentYear} IBEX Design. All rights reserved.
             </div>
 
@@ -178,7 +178,7 @@ export function Footer() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-sm text-primary-foreground/60 hover:text-white transition-colors"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -193,7 +193,7 @@ export function Footer() {
                   <Link
                     key={social.name}
                     href={social.href}
-                    className="text-primary-foreground/60 hover:text-white transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors"
                     aria-label={social.name}
                   >
                     <Icon className="h-5 w-5" />
