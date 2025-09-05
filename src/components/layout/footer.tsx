@@ -78,7 +78,7 @@ export function Footer() {
                 alt="IBEX Design" 
                 width={96} 
                 height={96}
-                className="h-24 w-24"
+                className="h-24 w-24 brightness-0 invert"
               />
             </div>
             <p className="text-teal-100 text-sm leading-relaxed">
