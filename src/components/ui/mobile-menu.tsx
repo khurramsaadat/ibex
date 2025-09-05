@@ -1,0 +1,114 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+interface MobileMenuProps {
+  children: React.ReactNode;
+  trigger?: React.ReactNode;
+  className?: string;
+  overlayClassName?: string;
+}
+
+export function MobileMenu({
+  children,
+  trigger,
+  className,
+  overlayClassName,
+}: MobileMenuProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  // Close menu on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        closeMenu();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("keydown", handleEscape);
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
+  return (
+    <>
+      {/* Trigger Button */}
+      {trigger ? (
+        <div onClick={toggleMenu} className="cursor-pointer">
+          {trigger}
+        </div>
+      ) : (
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={toggleMenu}
+          className="md:hidden"
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </Button>
+      )}
+
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className={cn(
+            "fixed inset-0 z-50 bg-black/50 backdrop-blur-sm",
+            overlayClassName
+          )}
+          onClick={closeMenu}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Menu Panel */}
+      <div
+        className={cn(
+          "fixed inset-y-0 right-0 z-50 w-full max-w-sm transform transition-transform duration-300 ease-in-out md:hidden",
+          isOpen ? "translate-x-0" : "translate-x-full",
+          className
+        )}
+      >
+        <div className="flex h-full flex-col bg-background border-l border-border shadow-xl">
+          {/* Header */}
+          <div className="flex items-center justify-between p-4 border-b border-border">
+            <h2 className="text-lg font-semibold">Menu</h2>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={closeMenu}
+              aria-label="Close menu"
+            >
+              <X className="h-5 w-5" />
+            </Button>
+          </div>
+
+          {/* Content */}
+          <div className="flex-1 overflow-y-auto p-4">
+            {children}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
