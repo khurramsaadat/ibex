@@ -36,7 +36,7 @@ export default function Services() {
       features: ["Logo Design", "Brand Guidelines", "Marketing Materials", "Print Design"],
       href: "/services/graphic-design",
       featured: true,
-      price: "Starting at $2,500",
+      price: "Starting at £2,000",
       duration: "2-4 weeks",
       deliverables: ["Logo variations", "Brand guidelines", "Business cards", "Letterhead"]
     },
@@ -47,7 +47,7 @@ export default function Services() {
       icon: <Globe className="h-8 w-8 text-primary" />,
       features: ["UI/UX Design", "Responsive Layout", "User Experience", "Modern Design"],
       href: "/services/web-design",
-      price: "Starting at $5,000",
+      price: "Starting at £4,000",
       duration: "4-8 weeks",
       deliverables: ["Wireframes", "Visual design", "Responsive layouts", "Style guide"]
     },
@@ -58,7 +58,7 @@ export default function Services() {
       icon: <Award className="h-8 w-8 text-primary" />,
       features: ["Brand Strategy", "Visual Identity", "Brand Guidelines", "Brand Assets"],
       href: "/services/brand-identity",
-      price: "Starting at $8,000",
+      price: "Starting at £6,500",
       duration: "6-10 weeks",
       deliverables: ["Brand strategy", "Logo system", "Brand guidelines", "Asset library"]
     },
@@ -69,7 +69,7 @@ export default function Services() {
       icon: <FileText className="h-8 w-8 text-primary" />,
       features: ["Annual Reports", "Presentations", "Corporate Materials", "Investor Relations"],
       href: "/services/corporate-communications",
-      price: "Starting at $3,000",
+      price: "Starting at £2,500",
       duration: "3-6 weeks",
       deliverables: ["Annual report", "Presentation templates", "Corporate materials", "Data visualization"]
     },
@@ -80,7 +80,7 @@ export default function Services() {
       icon: <FileText className="h-8 w-8 text-primary" />,
       features: ["Brochures", "Business Cards", "Packaging", "Marketing Collateral"],
       href: "/services/print-design",
-      price: "Starting at $1,500",
+      price: "Starting at £1,200",
       duration: "1-3 weeks",
       deliverables: ["Print-ready files", "Color specifications", "Print guidelines", "Quality assurance"]
     },
