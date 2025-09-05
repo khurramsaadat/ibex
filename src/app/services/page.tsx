@@ -15,7 +15,6 @@ import {
   ArrowRight,
   Star,
   Clock,
-  DollarSign,
   Target,
   Lightbulb,
   Shield,
@@ -223,8 +222,7 @@ export default function Services() {
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
                     <div className="flex items-center text-sm text-muted-foreground">
-                      <DollarSign className="h-4 w-4 mr-2" />
-                      {service.price}
+                      <span className="text-primary font-medium">{service.price}</span>
                     </div>
                     <div className="flex items-center text-sm text-muted-foreground">
                       <Clock className="h-4 w-4 mr-2" />
