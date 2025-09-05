@@ -24,45 +24,63 @@ export default function About() {
       id: "story",
       label: "Our Story",
       content: (
-        <div className="space-y-6">
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Founded in 2019, IBEX Design emerged from a simple yet powerful vision: to transform 
-            businesses through exceptional design. What started as a small team of passionate 
-            designers has grown into a full-service creative agency that serves clients across 
-            various industries.
-          </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Our journey began when we noticed a gap in the market for design agencies that truly 
-            understood both the creative and business aspects of design. We set out to bridge 
-            that gap, creating designs that not only look beautiful but also drive real business results.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6 mt-8">
-            <Card>
+        <div className="space-y-8">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Founded in 2019, IBEX Design emerged from a simple yet powerful vision: to transform 
+              businesses through exceptional design. What started as a small team of passionate 
+              designers has grown into a full-service creative agency that serves clients across 
+              various industries.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Our journey began when we noticed a gap in the market for design agencies that truly 
+              understood both the creative and business aspects of design. We set out to bridge 
+              that gap, creating designs that not only look beautiful but also drive real business results.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="group hover:shadow-lg transition-all duration-300">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <Users className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>2019</CardTitle>
-                <CardDescription>Founded with a vision to transform businesses through design</CardDescription>
+                <CardTitle className="text-2xl">2019</CardTitle>
+                <CardDescription className="text-base">Founded with a vision to transform businesses through design</CardDescription>
               </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Started as a small team of 3 designers with a shared passion for creating meaningful design solutions.
+                </p>
+              </CardContent>
             </Card>
-            <Card>
+            <Card className="group hover:shadow-lg transition-all duration-300">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <Award className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>2021</CardTitle>
-                <CardDescription>Won our first major design award for corporate identity</CardDescription>
+                <CardTitle className="text-2xl">2021</CardTitle>
+                <CardDescription className="text-base">Won our first major design award for corporate identity</CardDescription>
               </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Recognized by the Design Excellence Awards for our innovative approach to corporate branding.
+                </p>
+              </CardContent>
             </Card>
-            <Card>
+            <Card className="group hover:shadow-lg transition-all duration-300">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <Target className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>2024</CardTitle>
-                <CardDescription>Expanded to serve 50+ clients across multiple industries</CardDescription>
+                <CardTitle className="text-2xl">2024</CardTitle>
+                <CardDescription className="text-base">Expanded to serve 50+ clients across multiple industries</CardDescription>
               </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Grown to a team of 12+ designers and strategists serving clients worldwide.
+                </p>
+              </CardContent>
             </Card>
           </div>
         </div>
@@ -130,51 +148,110 @@ export default function About() {
       id: "team",
       label: "Our Team",
       content: (
-        <div className="space-y-6">
-          <p className="text-lg text-muted-foreground">
+        <div className="space-y-8">
+          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
             Our diverse team of designers, strategists, and developers brings together 
             decades of combined experience in creating exceptional digital experiences.
           </p>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 name: "Sarah Johnson",
                 role: "Creative Director",
                 expertise: ["Brand Strategy", "Visual Identity", "Team Leadership"],
-                experience: "8+ years"
+                experience: "8+ years",
+                bio: "Sarah leads our creative vision and ensures every project meets our high standards. She has a background in fine arts and has worked with Fortune 500 companies.",
+                avatar: "/api/placeholder/200/200",
+                linkedin: "#",
+                twitter: "#"
               },
               {
                 name: "Michael Chen",
                 role: "Lead UI/UX Designer",
                 expertise: ["User Research", "Interface Design", "Prototyping"],
-                experience: "6+ years"
+                experience: "6+ years",
+                bio: "Michael specializes in creating intuitive user experiences. He has a background in psychology and human-computer interaction.",
+                avatar: "/api/placeholder/200/200",
+                linkedin: "#",
+                twitter: "#"
               },
               {
                 name: "Emily Rodriguez",
                 role: "Senior Graphic Designer",
                 expertise: ["Print Design", "Brand Guidelines", "Marketing Materials"],
-                experience: "7+ years"
+                experience: "7+ years",
+                bio: "Emily brings print design expertise to our team. She has worked with major brands and understands the nuances of both digital and print design.",
+                avatar: "/api/placeholder/200/200",
+                linkedin: "#",
+                twitter: "#"
+              },
+              {
+                name: "David Kim",
+                role: "Frontend Developer",
+                expertise: ["React", "TypeScript", "Web Performance"],
+                experience: "5+ years",
+                bio: "David bridges the gap between design and development, ensuring our designs come to life with pixel-perfect precision.",
+                avatar: "/api/placeholder/200/200",
+                linkedin: "#",
+                twitter: "#"
+              },
+              {
+                name: "Lisa Wang",
+                role: "Brand Strategist",
+                expertise: ["Brand Strategy", "Market Research", "Competitive Analysis"],
+                experience: "6+ years",
+                bio: "Lisa helps our clients understand their market position and develop strategies that drive business growth through design.",
+                avatar: "/api/placeholder/200/200",
+                linkedin: "#",
+                twitter: "#"
+              },
+              {
+                name: "Alex Thompson",
+                role: "Project Manager",
+                expertise: ["Project Management", "Client Relations", "Process Optimization"],
+                experience: "4+ years",
+                bio: "Alex ensures every project runs smoothly from start to finish, keeping clients informed and teams aligned throughout the process.",
+                avatar: "/api/placeholder/200/200",
+                linkedin: "#",
+                twitter: "#"
               }
             ].map((member, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                    <Users className="h-8 w-8 text-primary" />
+              <Card key={index} className="group hover:shadow-lg transition-all duration-300">
+                <CardHeader className="text-center">
+                  <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <img 
+                      src={member.avatar} 
+                      alt={member.name}
+                      className="w-20 h-20 rounded-full object-cover"
+                    />
                   </div>
-                  <CardTitle className="text-lg">{member.name}</CardTitle>
-                  <CardDescription className="font-medium">{member.role}</CardDescription>
-                  <Badge variant="outline" className="w-fit">{member.experience}</Badge>
+                  <CardTitle className="text-xl">{member.name}</CardTitle>
+                  <CardDescription className="font-medium text-base">{member.role}</CardDescription>
+                  <Badge variant="outline" className="w-fit mx-auto">{member.experience}</Badge>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-2">
-                    <h4 className="text-sm font-medium">Expertise</h4>
-                    <div className="flex flex-wrap gap-1">
+                <CardContent className="space-y-4">
+                  <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                    {member.bio}
+                  </p>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium text-center">Expertise</h4>
+                    <div className="flex flex-wrap gap-1 justify-center">
                       {member.expertise.map((skill, skillIndex) => (
                         <Badge key={skillIndex} variant="secondary" className="text-xs">
                           {skill}
                         </Badge>
                       ))}
                     </div>
+                  </div>
+                  
+                  <div className="flex justify-center space-x-2 pt-2">
+                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                      <Users className="h-4 w-4" />
+                    </Button>
+                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                      <Award className="h-4 w-4" />
+                    </Button>
                   </div>
                 </CardContent>
               </Card>

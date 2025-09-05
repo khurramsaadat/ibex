@@ -1,13 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { LayoutWrapper } from "@/components/layout/layout-wrapper";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Pagination } from "@/components/ui/pagination";
 import { PortfolioCard } from "@/components/ui/portfolio-card";
+import { ProjectModal } from "@/components/ui/project-modal";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Search, Filter, Grid, List } from "lucide-react";
+import { Search, Filter, Grid, List, X } from "lucide-react";
 
 export default function Portfolio() {
   const breadcrumbItems = [
@@ -17,87 +18,258 @@ export default function Portfolio() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const categories = ["All", "Brand Identity", "Web Design", "Print Design", "Corporate", "Mobile App"];
 
   const projects = [
     {
+      id: "techcorp-brand",
       title: "TechCorp Brand Identity",
       description: "Complete brand identity redesign for a leading technology company, including logo, guidelines, and marketing materials.",
+      longDescription: "A comprehensive brand identity overhaul for TechCorp, a leading technology company looking to modernize their visual presence and better communicate their innovative approach to enterprise solutions.",
       image: "/api/placeholder/400/300",
       category: "Brand Identity",
       tags: ["Logo Design", "Brand Guidelines", "Corporate"],
       href: "/portfolio/techcorp-brand",
+      client: "TechCorp Inc.",
+      year: "2024",
+      duration: "8 weeks",
+      team: ["Sarah Johnson", "Michael Chen", "Emily Rodriguez"],
+      technologies: ["Adobe Creative Suite", "Figma", "Sketch"],
+      challenges: [
+        "Outdated brand perception in competitive market",
+        "Inconsistent visual identity across touchpoints",
+        "Need to appeal to both enterprise and startup audiences"
+      ],
+      solutions: [
+        "Developed modern, scalable logo system",
+        "Created comprehensive brand guidelines",
+        "Designed flexible visual language for all applications"
+      ],
+      results: [
+        "40% increase in brand recognition",
+        "25% improvement in lead generation",
+        "100% brand consistency across all touchpoints"
+      ],
+      testimonial: {
+        name: "Sarah Johnson",
+        role: "Marketing Director",
+        company: "TechCorp",
+        content: "IBEX Design transformed our brand identity completely. The new design system has improved our brand recognition by 40% and our marketing materials look incredibly professional.",
+        avatar: "/api/placeholder/48/48"
+      },
+      gallery: [
+        "/api/placeholder/800/600",
+        "/api/placeholder/800/600",
+        "/api/placeholder/800/600"
+      ]
     },
     {
+      id: "ecommerce-platform",
       title: "E-commerce Platform UI",
       description: "Modern e-commerce platform design with focus on user experience and conversion optimization.",
+      longDescription: "A complete UI/UX redesign for a growing e-commerce platform, focusing on improving user experience, increasing conversions, and creating a scalable design system.",
       image: "/api/placeholder/400/300",
       category: "Web Design",
       tags: ["UI/UX", "E-commerce", "Responsive"],
       href: "/portfolio/ecommerce-platform",
+      client: "ShopFlow",
+      year: "2024",
+      duration: "12 weeks",
+      team: ["Michael Chen", "Emily Rodriguez", "David Kim"],
+      technologies: ["Figma", "React", "TypeScript", "Tailwind CSS"],
+      challenges: [
+        "Low conversion rates on product pages",
+        "Complex checkout process causing cart abandonment",
+        "Mobile experience not optimized"
+      ],
+      solutions: [
+        "Redesigned product pages with better visual hierarchy",
+        "Streamlined checkout process to 3 steps",
+        "Created mobile-first responsive design"
+      ],
+      results: [
+        "35% increase in conversion rate",
+        "50% reduction in cart abandonment",
+        "60% improvement in mobile user engagement"
+      ],
+      testimonial: {
+        name: "Michael Chen",
+        role: "CEO",
+        company: "ShopFlow",
+        content: "The team at IBEX Design understood our vision perfectly. They delivered a website that not only looks amazing but also converts visitors into customers effectively.",
+        avatar: "/api/placeholder/48/48"
+      },
+      gallery: [
+        "/api/placeholder/800/600",
+        "/api/placeholder/800/600",
+        "/api/placeholder/800/600",
+        "/api/placeholder/800/600"
+      ]
     },
     {
+      id: "financial-report",
       title: "Financial Services Report",
       description: "Annual report design for a major financial institution with data visualization and infographics.",
+      longDescription: "A comprehensive annual report design for a major financial institution, featuring complex data visualization, infographics, and a sophisticated layout that communicates financial performance effectively.",
       image: "/api/placeholder/400/300",
       category: "Corporate",
       tags: ["Annual Report", "Data Visualization", "Print"],
       href: "/portfolio/financial-report",
+      client: "Global Finance Corp",
+      year: "2024",
+      duration: "6 weeks",
+      team: ["Emily Rodriguez", "Sarah Johnson"],
+      technologies: ["Adobe InDesign", "Illustrator", "Excel"],
+      challenges: [
+        "Complex financial data to present clearly",
+        "Regulatory compliance requirements",
+        "Need to balance professionalism with accessibility"
+      ],
+      solutions: [
+        "Created custom data visualization system",
+        "Developed clear infographic hierarchy",
+        "Designed accessible layout for all audiences"
+      ],
+      results: [
+        "Award for Best Annual Report Design",
+        "25% increase in stakeholder engagement",
+        "Positive feedback from regulatory bodies"
+      ],
+      gallery: [
+        "/api/placeholder/800/600",
+        "/api/placeholder/800/600"
+      ]
     },
     {
+      id: "startup-mobile-app",
       title: "Startup Mobile App",
       description: "Mobile application design for a fintech startup with focus on user onboarding and engagement.",
+      longDescription: "A complete mobile app design for a fintech startup, focusing on user onboarding, security, and engagement to build trust in the financial technology space.",
       image: "/api/placeholder/400/300",
       category: "Mobile App",
       tags: ["Mobile Design", "Fintech", "User Experience"],
       href: "/portfolio/startup-mobile-app",
+      client: "PayFlow",
+      year: "2024",
+      duration: "10 weeks",
+      team: ["Michael Chen", "David Kim", "Lisa Wang"],
+      technologies: ["Figma", "Principle", "React Native"],
+      challenges: [
+        "Building trust in fintech space",
+        "Complex onboarding process",
+        "Security concerns affecting UX"
+      ],
+      solutions: [
+        "Designed progressive onboarding flow",
+        "Created trust-building visual elements",
+        "Balanced security with usability"
+      ],
+      results: [
+        "40% increase in user retention",
+        "60% improvement in onboarding completion",
+        "4.8/5 app store rating"
+      ],
+      gallery: [
+        "/api/placeholder/800/600",
+        "/api/placeholder/800/600",
+        "/api/placeholder/800/600"
+      ]
     },
     {
+      id: "restaurant-branding",
       title: "Restaurant Branding",
       description: "Complete branding package for a high-end restaurant including logo, menu design, and marketing materials.",
+      longDescription: "A complete branding package for a high-end restaurant, creating a sophisticated visual identity that reflects the restaurant's culinary excellence and premium dining experience.",
       image: "/api/placeholder/400/300",
       category: "Brand Identity",
       tags: ["Logo Design", "Print Design", "Hospitality"],
       href: "/portfolio/restaurant-branding",
+      client: "Bella Vista Restaurant",
+      year: "2023",
+      duration: "4 weeks",
+      team: ["Sarah Johnson", "Emily Rodriguez"],
+      technologies: ["Adobe Creative Suite", "InDesign"],
+      challenges: [
+        "Creating premium brand perception",
+        "Standing out in competitive restaurant market",
+        "Designing for both digital and print applications"
+      ],
+      solutions: [
+        "Developed elegant, sophisticated logo system",
+        "Created cohesive visual language",
+        "Designed premium print materials"
+      ],
+      results: [
+        "30% increase in reservations",
+        "Award for Best Restaurant Branding",
+        "Consistent brand recognition across all touchpoints"
+      ],
+      gallery: [
+        "/api/placeholder/800/600",
+        "/api/placeholder/800/600"
+      ]
     },
     {
+      id: "healthcare-website",
       title: "Healthcare Website",
       description: "Responsive website design for a healthcare provider with focus on accessibility and user trust.",
+      longDescription: "A comprehensive website redesign for a healthcare provider, focusing on accessibility, user trust, and clear communication of medical services and information.",
       image: "/api/placeholder/400/300",
       category: "Web Design",
       tags: ["Healthcare", "Accessibility", "Responsive"],
       href: "/portfolio/healthcare-website",
-    },
-    {
-      title: "Fashion Magazine Layout",
-      description: "Editorial design for a high-end fashion magazine with innovative typography and layout concepts.",
-      image: "/api/placeholder/400/300",
-      category: "Print Design",
-      tags: ["Editorial", "Typography", "Fashion"],
-      href: "/portfolio/fashion-magazine",
-    },
-    {
-      title: "SaaS Dashboard Design",
-      description: "Complex dashboard interface for a SaaS platform with data visualization and user management features.",
-      image: "/api/placeholder/400/300",
-      category: "Web Design",
-      tags: ["SaaS", "Dashboard", "Data Visualization"],
-      href: "/portfolio/saas-dashboard",
-    },
-    {
-      title: "Nonprofit Annual Report",
-      description: "Impact-focused annual report design for a nonprofit organization with compelling storytelling.",
-      image: "/api/placeholder/400/300",
-      category: "Corporate",
-      tags: ["Nonprofit", "Annual Report", "Storytelling"],
-      href: "/portfolio/nonprofit-report",
+      client: "MedCare Health",
+      year: "2023",
+      duration: "8 weeks",
+      team: ["Michael Chen", "David Kim", "Accessibility Specialist"],
+      technologies: ["Figma", "React", "WCAG Guidelines"],
+      challenges: [
+        "WCAG accessibility compliance",
+        "Building trust in healthcare context",
+        "Complex medical information hierarchy"
+      ],
+      solutions: [
+        "Implemented WCAG 2.1 AA compliance",
+        "Created clear information architecture",
+        "Designed trust-building visual elements"
+      ],
+      results: [
+        "100% WCAG compliance achieved",
+        "45% increase in appointment bookings",
+        "Improved user satisfaction scores"
+      ],
+      gallery: [
+        "/api/placeholder/800/600",
+        "/api/placeholder/800/600",
+        "/api/placeholder/800/600"
+      ]
     }
   ];
 
-  const filteredProjects = selectedCategory === "All" 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+  const filteredProjects = useMemo(() => {
+    let filtered = projects;
+    
+    // Filter by category
+    if (selectedCategory !== "All") {
+      filtered = filtered.filter(project => project.category === selectedCategory);
+    }
+    
+    // Filter by search query
+    if (searchQuery) {
+      filtered = filtered.filter(project => 
+        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        project.client.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+    
+    return filtered;
+  }, [projects, selectedCategory, searchQuery]);
 
   const projectsPerPage = 6;
   const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
@@ -113,6 +285,30 @@ export default function Portfolio() {
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
     setCurrentPage(1);
+  };
+
+  const handleProjectClick = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
+
+  const handleNextProject = () => {
+    const currentIndex = filteredProjects.findIndex(p => p.id === selectedProject?.id);
+    if (currentIndex < filteredProjects.length - 1) {
+      setSelectedProject(filteredProjects[currentIndex + 1]);
+    }
+  };
+
+  const handlePrevProject = () => {
+    const currentIndex = filteredProjects.findIndex(p => p.id === selectedProject?.id);
+    if (currentIndex > 0) {
+      setSelectedProject(filteredProjects[currentIndex - 1]);
+    }
   };
 
   return (
@@ -157,8 +353,18 @@ export default function Portfolio() {
                 <input
                   type="text"
                   placeholder="Search projects..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10 pr-4 py-2 border border-input rounded-md bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery("")}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                )}
               </div>
               <div className="flex border border-input rounded-md">
                 <Button
@@ -196,7 +402,13 @@ export default function Portfolio() {
               : "grid-cols-1"
           }`}>
             {currentProjects.map((project, index) => (
-              <PortfolioCard key={index} {...project} />
+              <div 
+                key={index} 
+                className="cursor-pointer transform transition-transform duration-300 hover:scale-105"
+                onClick={() => handleProjectClick(project)}
+              >
+                <PortfolioCard {...project} />
+              </div>
             ))}
           </div>
 
@@ -222,6 +434,17 @@ export default function Portfolio() {
           </section>
         </div>
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        onNext={handleNextProject}
+        onPrev={handlePrevProject}
+        hasNext={filteredProjects.findIndex(p => p.id === selectedProject?.id) < filteredProjects.length - 1}
+        hasPrev={filteredProjects.findIndex(p => p.id === selectedProject?.id) > 0}
+      />
     </LayoutWrapper>
   );
 }
