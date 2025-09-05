@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -72,9 +73,13 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10">
-                <span className="text-lg font-bold text-white">I</span>
-              </div>
+              <Image 
+                src="/logo.svg" 
+                alt="IBEX Design" 
+                width={32} 
+                height={32}
+                className="h-8 w-8"
+              />
               <span className="text-xl font-bold">IBEX Design</span>
             </div>
             <p className="text-teal-100 text-sm leading-relaxed">
