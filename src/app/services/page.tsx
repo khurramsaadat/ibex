@@ -91,7 +91,7 @@ export default function Services() {
       icon: <Users className="h-8 w-8 text-primary" />,
       features: ["User Research", "Wireframing", "Prototyping", "Usability Testing"],
       href: "/services/ui-ux-design",
-      price: "Starting at $4,000",
+      price: "Starting at £3,200",
       duration: "3-6 weeks",
       deliverables: ["User research", "Wireframes", "Prototypes", "Usability report"]
     }
@@ -100,7 +100,7 @@ export default function Services() {
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$2,500",
+      price: "£2,000",
       description: "Perfect for small businesses and startups",
       features: [
         "Logo design (3 concepts)",
@@ -113,7 +113,7 @@ export default function Services() {
     },
     {
       name: "Professional",
-      price: "$5,000",
+      price: "£4,000",
       description: "Ideal for growing businesses",
       features: [
         "Complete brand identity",
@@ -127,7 +127,7 @@ export default function Services() {
     },
     {
       name: "Enterprise",
-      price: "$10,000+",
+      price: "£8,000+",
       description: "For large organizations and complex projects",
       features: [
         "Full brand strategy & identity",
