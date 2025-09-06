@@ -90,22 +90,27 @@ export function Header() {
           {/* Mobile Menu */}
           <div className="md:hidden">
             <MobileMenu>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {/* Navigation Links */}
-                <div className="space-y-0">
+                <div className="space-y-2">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
+                      className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors"
+                      onClick={() => {
+                        // Close menu when link is clicked
+                        const event = new CustomEvent('closeMobileMenu');
+                        window.dispatchEvent(event);
+                      }}
                     >
                       {item.name}
                     </Link>
                   ))}
                 </div>
                 
-                <div className="pt-3 border-t border-gray-200">
-                  <Button asChild size="sm" className="w-full">
+                <div className="pt-6 border-t border-gray-200">
+                  <Button asChild size="lg" className="w-full text-lg py-3">
                     <Link href="/contact">
                       Get Started
                     </Link>
