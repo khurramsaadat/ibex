@@ -84,27 +84,28 @@ export function MobileMenu({
       {/* Menu Panel */}
       <div
         className={cn(
-          "fixed inset-y-0 right-0 z-50 w-full max-w-sm transform transition-transform duration-300 ease-in-out md:hidden",
+          "fixed inset-y-0 right-0 z-50 w-80 max-w-[85vw] transform transition-transform duration-300 ease-in-out md:hidden",
           isOpen ? "translate-x-0" : "translate-x-full",
           className
         )}
       >
-        <div className="flex h-full flex-col bg-background border-l border-border shadow-xl">
+        <div className="flex h-full flex-col bg-white border-l border-gray-200 shadow-2xl">
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-border">
-            <h2 className="text-lg font-semibold">Menu</h2>
+          <div className="flex items-center justify-between p-6 border-b border-gray-200">
+            <h2 className="text-xl font-semibold text-gray-900">Menu</h2>
             <Button
               variant="ghost"
               size="sm"
               onClick={closeMenu}
+              className="text-gray-500 hover:text-gray-700 hover:bg-gray-100"
               aria-label="Close menu"
             >
-              <X className="h-5 w-5" />
+              <X className="h-6 w-6" />
             </Button>
           </div>
 
           {/* Content */}
-          <div className="flex-1 overflow-y-auto p-4">
+          <div className="flex-1 overflow-y-auto p-6">
             {children}
           </div>
         </div>
