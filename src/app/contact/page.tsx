@@ -347,7 +347,7 @@ const ContactPage = () => {
                     <Mail className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <p className="font-semibold">Email</p>
-                      <p className="text-muted-foreground">hello@ibexdesign.co.uk</p>
+                      <p className="text-muted-foreground">team@ibexdesign.uk</p>
                       <p className="text-sm text-muted-foreground">We respond within 24 hours</p>
                     </div>
                   </div>

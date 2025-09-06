@@ -30,7 +30,7 @@ export default function Portfolio() {
       title: "TechCorp Brand Identity",
       description: "Complete brand identity redesign for a leading technology company, including logo, guidelines, and marketing materials.",
       longDescription: "A comprehensive brand identity overhaul for TechCorp, a leading technology company looking to modernize their visual presence and better communicate their innovative approach to enterprise solutions.",
-      image: "/api/placeholder/400/300",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
       category: "Brand Identity",
       tags: ["Logo Design", "Brand Guidelines", "Corporate"],
       href: "/portfolio/techcorp-brand",
@@ -59,12 +59,12 @@ export default function Portfolio() {
         role: "Marketing Director",
         company: "TechCorp",
         content: "IBEX Design transformed our brand identity completely. The new design system has improved our brand recognition by 40% and our marketing materials look incredibly professional.",
-        avatar: "/api/placeholder/48/48"
+        avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80"
       },
       gallery: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600"
+        "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80"
       ]
     },
     {
@@ -72,7 +72,7 @@ export default function Portfolio() {
       title: "E-commerce Platform UI",
       description: "Modern e-commerce platform design with focus on user experience and conversion optimization.",
       longDescription: "A complete UI/UX redesign for a growing e-commerce platform, focusing on improving user experience, increasing conversions, and creating a scalable design system.",
-      image: "/api/placeholder/400/300",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
       category: "Web Design",
       tags: ["UI/UX", "E-commerce", "Responsive"],
       href: "/portfolio/ecommerce-platform",
@@ -101,12 +101,12 @@ export default function Portfolio() {
         role: "CEO",
         company: "ShopFlow",
         content: "The team at IBEX Design understood our vision perfectly. They delivered a website that not only looks amazing but also converts visitors into customers effectively.",
-        avatar: "/api/placeholder/48/48"
+        avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80"
       },
       gallery: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
         "/api/placeholder/800/600"
       ]
     },
@@ -115,7 +115,7 @@ export default function Portfolio() {
       title: "Financial Services Report",
       description: "Annual report design for a major financial institution with data visualization and infographics.",
       longDescription: "A comprehensive annual report design for a major financial institution, featuring complex data visualization, infographics, and a sophisticated layout that communicates financial performance effectively.",
-      image: "/api/placeholder/400/300",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
       category: "Corporate",
       tags: ["Annual Report", "Data Visualization", "Print"],
       href: "/portfolio/financial-report",
@@ -140,7 +140,7 @@ export default function Portfolio() {
         "Positive feedback from regulatory bodies"
       ],
       gallery: [
-        "/api/placeholder/800/600",
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
         "/api/placeholder/800/600"
       ]
     },
@@ -149,7 +149,7 @@ export default function Portfolio() {
       title: "Startup Mobile App",
       description: "Mobile application design for a fintech startup with focus on user onboarding and engagement.",
       longDescription: "A complete mobile app design for a fintech startup, focusing on user onboarding, security, and engagement to build trust in the financial technology space.",
-      image: "/api/placeholder/400/300",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
       category: "Mobile App",
       tags: ["Mobile Design", "Fintech", "User Experience"],
       href: "/portfolio/startup-mobile-app",
@@ -174,8 +174,8 @@ export default function Portfolio() {
         "4.8/5 app store rating"
       ],
       gallery: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
         "/api/placeholder/800/600"
       ]
     },
@@ -184,7 +184,7 @@ export default function Portfolio() {
       title: "Restaurant Branding",
       description: "Complete branding package for a high-end restaurant including logo, menu design, and marketing materials.",
       longDescription: "A complete branding package for a high-end restaurant, creating a sophisticated visual identity that reflects the restaurant's culinary excellence and premium dining experience.",
-      image: "/api/placeholder/400/300",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
       category: "Brand Identity",
       tags: ["Logo Design", "Print Design", "Hospitality"],
       href: "/portfolio/restaurant-branding",
@@ -209,7 +209,7 @@ export default function Portfolio() {
         "Consistent brand recognition across all touchpoints"
       ],
       gallery: [
-        "/api/placeholder/800/600",
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
         "/api/placeholder/800/600"
       ]
     },
@@ -218,7 +218,7 @@ export default function Portfolio() {
       title: "Healthcare Website",
       description: "Responsive website design for a healthcare provider with focus on accessibility and user trust.",
       longDescription: "A comprehensive website redesign for a healthcare provider, focusing on accessibility, user trust, and clear communication of medical services and information.",
-      image: "/api/placeholder/400/300",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
       category: "Web Design",
       tags: ["Healthcare", "Accessibility", "Responsive"],
       href: "/portfolio/healthcare-website",
@@ -243,8 +243,8 @@ export default function Portfolio() {
         "Improved user satisfaction scores"
       ],
       gallery: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
         "/api/placeholder/800/600"
       ]
     }
