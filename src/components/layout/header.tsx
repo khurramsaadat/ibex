@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { MobileMenu } from "@/components/ui/mobile-menu";
+import { Menu } from "lucide-react";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -89,7 +90,18 @@ export function Header() {
 
           {/* Mobile Menu */}
           <div className="md:hidden">
-            <MobileMenu>
+            <MobileMenu
+              trigger={
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="md:hidden"
+                  aria-label="Toggle menu"
+                >
+                  <Menu className="h-6 w-6" />
+                </Button>
+              }
+            >
               <div className="space-y-4">
                 {/* Navigation Links */}
                 <div className="space-y-2">
