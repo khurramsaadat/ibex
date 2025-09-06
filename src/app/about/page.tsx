@@ -85,64 +85,6 @@ export default function About() {
           </div>
         </div>
       )
-    },
-    {
-      id: "values",
-      label: "Our Values",
-      content: (
-        <div className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card>
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Heart className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>Passion for Excellence</CardTitle>
-                <CardDescription>
-                  We believe that great design comes from a deep passion for creating meaningful 
-                  experiences that resonate with users and drive business success.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card>
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>Collaborative Approach</CardTitle>
-                <CardDescription>
-                  We work closely with our clients as partners, ensuring that every project 
-                  reflects their unique vision while leveraging our expertise.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card>
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Target className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>Results-Driven</CardTitle>
-                <CardDescription>
-                  Every design decision we make is backed by data and focused on achieving 
-                  measurable results for our clients' businesses.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card>
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Award className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>Continuous Innovation</CardTitle>
-                <CardDescription>
-                  We stay at the forefront of design trends and technologies, constantly 
-                  evolving our approach to deliver cutting-edge solutions.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
-      )
     }
   ];
 
@@ -305,6 +247,66 @@ export default function About() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </section>
+
+          {/* Our Values Section */}
+          <section className="py-16">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Our Values</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                The principles that guide everything we do and shape our approach to design and client relationships.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card>
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Heart className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle>Passion for Excellence</CardTitle>
+                  <CardDescription>
+                    We believe that great design comes from a deep passion for creating meaningful 
+                    experiences that resonate with users and drive business success.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Users className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle>Collaborative Approach</CardTitle>
+                  <CardDescription>
+                    We work closely with our clients as partners, ensuring that every project 
+                    reflects their unique vision while leveraging our expertise.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Target className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle>Results-Driven</CardTitle>
+                  <CardDescription>
+                    Every design decision we make is backed by data and focused on achieving 
+                    measurable results for our clients' businesses.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Award className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle>Continuous Innovation</CardTitle>
+                  <CardDescription>
+                    We stay at the forefront of design trends and technologies, constantly 
+                    evolving our methods to deliver cutting-edge solutions.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
             </div>
           </section>
 
