@@ -143,122 +143,6 @@ export default function About() {
           </div>
         </div>
       )
-    },
-    {
-      id: "team",
-      label: "Our Team",
-      content: (
-        <div className="space-y-8">
-          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
-            Our diverse team of designers, strategists, and developers brings together 
-            decades of combined experience in creating exceptional digital experiences.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Jessica Martinez",
-                role: "Creative Director",
-                expertise: ["Brand Strategy", "Visual Identity", "Team Leadership"],
-                experience: "8+ years",
-                bio: "Jessica leads our creative vision and ensures every project meets our high standards. She has a background in fine arts and has worked with Fortune 500 companies.",
-                avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
-                linkedin: "#",
-                twitter: "#"
-              },
-              {
-                name: "James Wilson",
-                role: "Lead UI/UX Designer",
-                expertise: ["User Research", "Interface Design", "Prototyping"],
-                experience: "6+ years",
-                bio: "James specializes in creating intuitive user experiences. He has a background in psychology and human-computer interaction.",
-                avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
-                linkedin: "#",
-                twitter: "#"
-              },
-              {
-                name: "Sofia Chen",
-                role: "Senior Graphic Designer",
-                expertise: ["Print Design", "Brand Guidelines", "Marketing Materials"],
-                experience: "7+ years",
-                bio: "Sofia brings print design expertise to our team. She has worked with major brands and understands the nuances of both digital and print design.",
-                avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
-                linkedin: "#",
-                twitter: "#"
-              },
-              {
-                name: "Ryan Park",
-                role: "Frontend Developer",
-                expertise: ["React", "TypeScript", "Web Performance"],
-                experience: "5+ years",
-                bio: "Ryan bridges the gap between design and development, ensuring our designs come to life with pixel-perfect precision.",
-                avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
-                linkedin: "#",
-                twitter: "#"
-              },
-              {
-                name: "Amanda Foster",
-                role: "Brand Strategist",
-                expertise: ["Brand Strategy", "Market Research", "Competitive Analysis"],
-                experience: "6+ years",
-                bio: "Amanda helps our clients understand their market position and develop strategies that drive business growth through design.",
-                avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
-                linkedin: "#",
-                twitter: "#"
-              },
-              {
-                name: "Marcus Johnson",
-                role: "Project Manager",
-                expertise: ["Project Management", "Client Relations", "Process Optimization"],
-                experience: "4+ years",
-                bio: "Marcus ensures every project runs smoothly from start to finish, keeping clients informed and teams aligned throughout the process.",
-                avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
-                linkedin: "#",
-                twitter: "#"
-              }
-            ].map((member, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300">
-                <CardHeader className="text-center">
-                  <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
-                    <img 
-                      src={member.avatar} 
-                      alt={member.name}
-                      className="w-20 h-20 rounded-full object-cover"
-                    />
-                  </div>
-                  <CardTitle className="text-xl">{member.name}</CardTitle>
-                  <CardDescription className="font-medium text-base">{member.role}</CardDescription>
-                  <Badge variant="outline" className="w-fit mx-auto">{member.experience}</Badge>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-sm text-muted-foreground text-center leading-relaxed">
-                    {member.bio}
-                  </p>
-                  
-                  <div className="space-y-3">
-                    <h4 className="text-sm font-medium text-center">Expertise</h4>
-                    <div className="flex flex-wrap gap-1 justify-center">
-                      {member.expertise.map((skill, skillIndex) => (
-                        <Badge key={skillIndex} variant="secondary" className="text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="flex justify-center space-x-2 pt-2">
-                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                      <Users className="h-4 w-4" />
-                    </Button>
-                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                      <Award className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      )
     }
   ];
 
@@ -269,6 +153,69 @@ export default function About() {
     "100% Client Satisfaction",
     "15+ Design Awards",
     "3 Industry Certifications"
+  ];
+
+  const teamMembers = [
+    {
+      name: "Jessica Martinez",
+      role: "Creative Director",
+      expertise: ["Brand Strategy", "Visual Identity", "Team Leadership"],
+      experience: "8+ years",
+      bio: "Jessica leads our creative vision and ensures every project meets our high standards. She has a background in fine arts and has worked with Fortune 500 companies.",
+      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+      linkedin: "#",
+      twitter: "#"
+    },
+    {
+      name: "James Wilson",
+      role: "Lead UI/UX Designer",
+      expertise: ["User Research", "Interface Design", "Prototyping"],
+      experience: "6+ years",
+      bio: "James specializes in creating intuitive user experiences. He has a background in psychology and human-computer interaction.",
+      avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+      linkedin: "#",
+      twitter: "#"
+    },
+    {
+      name: "Sofia Chen",
+      role: "Senior Graphic Designer",
+      expertise: ["Print Design", "Brand Guidelines", "Marketing Materials"],
+      experience: "7+ years",
+      bio: "Sofia brings print design expertise to our team. She has worked with major brands and understands the nuances of both digital and print design.",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+      linkedin: "#",
+      twitter: "#"
+    },
+    {
+      name: "Ryan Park",
+      role: "Frontend Developer",
+      expertise: ["React", "TypeScript", "Web Performance"],
+      experience: "5+ years",
+      bio: "Ryan bridges the gap between design and development, ensuring our designs come to life with pixel-perfect precision.",
+      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+      linkedin: "#",
+      twitter: "#"
+    },
+    {
+      name: "Amanda Foster",
+      role: "Brand Strategist",
+      expertise: ["Brand Strategy", "Market Research", "Competitive Analysis"],
+      experience: "6+ years",
+      bio: "Amanda helps our clients understand their market position and develop strategies that drive business growth through design.",
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+      linkedin: "#",
+      twitter: "#"
+    },
+    {
+      name: "Marcus Johnson",
+      role: "Project Manager",
+      expertise: ["Project Management", "Client Relations", "Process Optimization"],
+      experience: "4+ years",
+      bio: "Marcus ensures every project runs smoothly from start to finish, keeping clients informed and teams aligned throughout the process.",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+      linkedin: "#",
+      twitter: "#"
+    }
   ];
 
   return (
@@ -300,7 +247,7 @@ export default function About() {
                 Numbers that speak to our commitment to excellence and client success.
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
               {achievements.map((achievement, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -308,6 +255,55 @@ export default function About() {
                   </div>
                   <p className="text-sm font-medium">{achievement}</p>
                 </div>
+              ))}
+            </div>
+            
+            {/* Team Section */}
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-bold mb-4">Meet Our Team</h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Our diverse team of designers, strategists, and developers brings together 
+                decades of combined experience in creating exceptional digital experiences.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300">
+                  <CardHeader className="text-center">
+                    <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                      <img 
+                        src={member.avatar} 
+                        alt={member.name}
+                        className="w-20 h-20 rounded-full object-cover"
+                      />
+                    </div>
+                    <CardTitle className="text-xl">{member.name}</CardTitle>
+                    <CardDescription className="font-medium text-base">{member.role}</CardDescription>
+                    <Badge variant="secondary" className="w-fit mx-auto">
+                      {member.experience}
+                    </Badge>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                      {member.bio}
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-2 mb-4">
+                      {member.expertise.map((skill, skillIndex) => (
+                        <Badge key={skillIndex} variant="outline" className="text-xs">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                    <div className="flex justify-center space-x-4">
+                      <Button variant="ghost" size="sm" className="p-2">
+                        <Users className="h-4 w-4" />
+                      </Button>
+                      <Button variant="ghost" size="sm" className="p-2">
+                        <Star className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </section>
