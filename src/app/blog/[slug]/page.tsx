@@ -1,12 +1,11 @@
-'use client';
-
-import { useState } from 'react';
-import { Calendar, User, Clock, Tag, ArrowLeft, Share2, BookOpen, Heart } from 'lucide-react';
+import { Calendar, User, Clock, Tag, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { LayoutWrapper } from '@/components/layout/layout-wrapper';
 import { BlogCard } from '@/components/ui/blog-card';
+import { BlogArticleInteractions } from '@/components/ui/blog-article-interactions';
+import Image from 'next/image';
 import Link from 'next/link';
 
 // Mock blog data (in a real app, this would come from a CMS or API)
@@ -254,18 +253,17 @@ const getRelatedArticles = (currentSlug: string) => {
 };
 
 interface BlogArticlePageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-const BlogArticlePage = ({ params }: BlogArticlePageProps) => {
-  const [isLiked, setIsLiked] = useState(false);
-  const [likeCount, setLikeCount] = useState(0);
+const BlogArticlePage = async ({ params }: BlogArticlePageProps) => {
+  const { slug } = await params;
 
   // Find the article by slug
-  const article = blogPosts.find(post => post.slug === params.slug);
-  const relatedArticles = getRelatedArticles(params.slug);
+  const article = blogPosts.find(post => post.slug === slug);
+  const relatedArticles = getRelatedArticles(slug);
 
   if (!article) {
     return (
@@ -275,7 +273,7 @@ const BlogArticlePage = ({ params }: BlogArticlePageProps) => {
             <CardContent className="text-center py-12">
               <h1 className="text-2xl font-bold mb-4">Article Not Found</h1>
               <p className="text-muted-foreground mb-6">
-                The article you're looking for doesn't exist or has been moved.
+                The article you&apos;re looking for doesn&apos;t exist or has been moved.
               </p>
               <Link href="/blog">
                 <Button>
@@ -290,27 +288,6 @@ const BlogArticlePage = ({ params }: BlogArticlePageProps) => {
     );
   }
 
-  const handleLike = () => {
-    setIsLiked(!isLiked);
-    setLikeCount(prev => isLiked ? prev - 1 : prev + 1);
-  };
-
-  const handleShare = async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: article.title,
-          text: article.excerpt,
-          url: window.location.href,
-        });
-      } catch (err) {
-        console.log('Error sharing:', err);
-      }
-    } else {
-      // Fallback: copy to clipboard
-      navigator.clipboard.writeText(window.location.href);
-    }
-  };
 
   return (
     <LayoutWrapper>
@@ -369,33 +346,16 @@ const BlogArticlePage = ({ params }: BlogArticlePageProps) => {
             </div>
 
             {/* Article Actions */}
-            <div className="flex items-center gap-4">
-              <Button
-                variant={isLiked ? "default" : "outline"}
-                size="sm"
-                onClick={handleLike}
-                className="gap-2"
-              >
-                <Heart className={`h-4 w-4 ${isLiked ? 'fill-current' : ''}`} />
-                {article.likes + likeCount} {isLiked ? 'Liked' : 'Like'}
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handleShare}
-                className="gap-2"
-              >
-                <Share2 className="h-4 w-4" />
-                Share
-              </Button>
-            </div>
+            <BlogArticleInteractions article={article} />
           </header>
 
           {/* Featured Image */}
           <div className="mb-12">
-            <img
+            <Image
               src={article.image}
               alt={article.title}
+              width={800}
+              height={400}
               className="w-full h-64 md:h-96 object-cover rounded-lg shadow-xl"
             />
           </div>
@@ -417,9 +377,11 @@ const BlogArticlePage = ({ params }: BlogArticlePageProps) => {
           <footer className="mt-16 pt-8 border-t">
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center gap-4">
-                <img
+                <Image
                   src={article.authorAvatar}
                   alt={article.author}
+                  width={48}
+                  height={48}
                   className="w-12 h-12 rounded-full"
                 />
                 <div>
@@ -427,26 +389,7 @@ const BlogArticlePage = ({ params }: BlogArticlePageProps) => {
                   <p className="text-sm text-muted-foreground">{article.authorRole}</p>
                 </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Button
-                  variant={isLiked ? "default" : "outline"}
-                  size="sm"
-                  onClick={handleLike}
-                  className="gap-2"
-                >
-                  <Heart className={`h-4 w-4 ${isLiked ? 'fill-current' : ''}`} />
-                  {article.likes + likeCount}
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={handleShare}
-                  className="gap-2"
-                >
-                  <Share2 className="h-4 w-4" />
-                  Share
-                </Button>
-              </div>
+              <BlogArticleInteractions article={article} />
             </div>
           </footer>
         </article>
@@ -462,7 +405,21 @@ const BlogArticlePage = ({ params }: BlogArticlePageProps) => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedArticles.map((post) => (
-                <BlogCard key={post.id} post={post} featured={false} />
+                <BlogCard 
+                  key={post.id} 
+                  title={post.title}
+                  excerpt={post.excerpt}
+                  image={post.image}
+                  category={post.category}
+                  author={post.author}
+                  date={new Date(post.publishedAt).toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  })}
+                  readTime={post.readTime}
+                  href={`/blog/${post.slug}`}
+                />
               ))}
             </div>
           </section>

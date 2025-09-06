@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { LayoutWrapper } from "@/components/layout/layout-wrapper";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ServiceCard } from "@/components/ui/service-card";
 import { PortfolioCard } from "@/components/ui/portfolio-card";
-import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { TestimonialsCarousel } from "@/components/ui/testimonials-carousel";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
 import { 
@@ -15,8 +13,7 @@ import {
   Award, 
   Zap,
   Star,
-  ArrowRight,
-  CheckCircle
+  ArrowRight
 } from "lucide-react";
 
 export default function Home() {
@@ -246,7 +243,7 @@ export default function Home() {
           {/* CTA Section */}
           <div className="text-center mt-16 animate-fade-in-up delay-500">
             <p className="text-lg text-muted-foreground mb-6">
-              Ready to transform your brand? Let's discuss your project.
+              Ready to transform your brand? Let&apos;s discuss your project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-lg px-8 py-6">
@@ -280,7 +277,7 @@ export default function Home() {
               <span className="block text-primary">Success Stories</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-              Explore our latest projects and see how we've helped businesses 
+              Explore our latest projects and see how we&apos;ve helped businesses 
               transform their visual identity and digital presence with measurable results.
             </p>
           </div>
@@ -341,8 +338,8 @@ export default function Home() {
               <span className="block text-primary">Say About Us</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-              Don't just take our word for it. Here's what our clients have to say 
-              about working with IBEX Design and the results we've achieved together.
+              Don&apos;t just take our word for it. Here&apos;s what our clients have to say 
+              about working with IBEX Design and the results we&apos;ve achieved together.
             </p>
           </div>
           
@@ -370,7 +367,7 @@ export default function Home() {
                 <span className="block text-primary">Excellence Since 2019</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                We're a passionate team of designers and strategists dedicated to transforming 
+                We&apos;re a passionate team of designers and strategists dedicated to transforming 
                 businesses through exceptional visual communication. Our mission is to create 
                 designs that not only look beautiful but also drive real business results.
               </p>

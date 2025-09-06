@@ -14,6 +14,7 @@ import { BlogCard } from '@/components/ui/blog-card';
 const blogPosts = [
   {
     id: 1,
+    slug: "future-of-brand-design-trends-2024",
     title: "The Future of Brand Design: Trends to Watch in 2024",
     excerpt: "Explore the latest trends shaping brand design and how they're revolutionizing the creative industry.",
     content: "Full article content here...",
@@ -29,6 +30,7 @@ const blogPosts = [
   },
   {
     id: 2,
+    slug: "create-memorable-logo-complete-guide",
     title: "How to Create a Memorable Logo: A Complete Guide",
     excerpt: "Learn the essential principles and techniques for designing logos that stand out and resonate with your audience.",
     content: "Full article content here...",
@@ -44,6 +46,7 @@ const blogPosts = [
   },
   {
     id: 3,
+    slug: "psychology-color-web-design",
     title: "The Psychology of Color in Web Design",
     excerpt: "Understanding how color choices impact user behavior and conversion rates in web design.",
     content: "Full article content here...",
@@ -59,6 +62,7 @@ const blogPosts = [
   },
   {
     id: 4,
+    slug: "corporate-annual-reports-design-story",
     title: "Corporate Annual Reports: Design That Tells a Story",
     excerpt: "How to transform dry financial data into compelling visual narratives that engage stakeholders.",
     content: "Full article content here...",
@@ -74,6 +78,7 @@ const blogPosts = [
   },
   {
     id: 5,
+    slug: "minimalist-design-less-more-branding",
     title: "Minimalist Design: Less is More in Modern Branding",
     excerpt: "The power of simplicity in design and how minimalist approaches can strengthen brand identity.",
     content: "Full article content here...",
@@ -89,6 +94,7 @@ const blogPosts = [
   },
   {
     id: 6,
+    slug: "typography-trends-whats-hot-2024",
     title: "Typography Trends: What's Hot in 2024",
     excerpt: "Discover the typography trends that are defining modern design and how to use them effectively.",
     content: "Full article content here...",
@@ -267,7 +273,21 @@ const BlogPage = () => {
               </div>
               <div className="grid lg:grid-cols-2 gap-8">
                 {featuredPosts.map((post) => (
-                  <BlogCard key={post.id} post={post} featured={true} />
+                  <BlogCard 
+                    key={post.id} 
+                    title={post.title}
+                    excerpt={post.excerpt}
+                    image={post.image}
+                    category={post.category}
+                    author={post.author}
+                    date={new Date(post.publishedAt).toLocaleDateString('en-US', { 
+                      year: 'numeric', 
+                      month: 'long', 
+                      day: 'numeric' 
+                    })}
+                    readTime={post.readTime}
+                    href={`/blog/${post.slug}`}
+                  />
                 ))}
               </div>
             </section>
@@ -287,7 +307,21 @@ const BlogPage = () => {
             {regularPosts.length > 0 ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {regularPosts.map((post) => (
-                  <BlogCard key={post.id} post={post} featured={false} />
+                  <BlogCard 
+                    key={post.id} 
+                    title={post.title}
+                    excerpt={post.excerpt}
+                    image={post.image}
+                    category={post.category}
+                    author={post.author}
+                    date={new Date(post.publishedAt).toLocaleDateString('en-US', { 
+                      year: 'numeric', 
+                      month: 'long', 
+                      day: 'numeric' 
+                    })}
+                    readTime={post.readTime}
+                    href={`/blog/${post.slug}`}
+                  />
                 ))}
               </div>
             ) : (
