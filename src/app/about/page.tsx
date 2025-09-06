@@ -41,7 +41,7 @@ export default function About() {
             <Card className="group hover:shadow-lg transition-all duration-300">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <Users className="h-6 w-6 text-primary" />
+                  <Award className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle className="text-2xl">2019</CardTitle>
                 <CardDescription className="text-base">Founded with a vision to transform businesses through design</CardDescription>
@@ -264,7 +264,7 @@ export default function About() {
               <Card>
                 <CardHeader>
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <Users className="h-6 w-6 text-primary" />
+                    <Award className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle>Collaborative Approach</CardTitle>
                   <CardDescription>
