@@ -102,7 +102,7 @@ export default function About() {
       expertise: ["Brand Strategy", "Visual Identity", "Team Leadership"],
       experience: "8+ years",
       bio: "Jessica leads our creative vision and ensures every project meets our high standards. She has a background in fine arts and has worked with Fortune 500 companies.",
-      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
       linkedin: "#",
       twitter: "#"
     },
@@ -112,7 +112,7 @@ export default function About() {
       expertise: ["User Research", "Interface Design", "Prototyping"],
       experience: "6+ years",
       bio: "James specializes in creating intuitive user experiences. He has a background in psychology and human-computer interaction.",
-      avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
       linkedin: "#",
       twitter: "#"
     },
@@ -122,7 +122,7 @@ export default function About() {
       expertise: ["Print Design", "Brand Guidelines", "Marketing Materials"],
       experience: "7+ years",
       bio: "Sofia brings print design expertise to our team. She has worked with major brands and understands the nuances of both digital and print design.",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
       linkedin: "#",
       twitter: "#"
     },
@@ -132,7 +132,7 @@ export default function About() {
       expertise: ["React", "TypeScript", "Web Performance"],
       experience: "5+ years",
       bio: "Ryan bridges the gap between design and development, ensuring our designs come to life with pixel-perfect precision.",
-      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
       linkedin: "#",
       twitter: "#"
     },
@@ -142,7 +142,7 @@ export default function About() {
       expertise: ["Brand Strategy", "Market Research", "Competitive Analysis"],
       experience: "6+ years",
       bio: "Amanda helps our clients understand their market position and develop strategies that drive business growth through design.",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
       linkedin: "#",
       twitter: "#"
     },
@@ -152,7 +152,7 @@ export default function About() {
       expertise: ["Project Management", "Client Relations", "Process Optimization"],
       experience: "4+ years",
       bio: "Marcus ensures every project runs smoothly from start to finish, keeping clients informed and teams aligned throughout the process.",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
       linkedin: "#",
       twitter: "#"
     }
