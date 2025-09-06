@@ -104,7 +104,7 @@ export default function Home() {
       role: "Marketing Director",
       company: "TechCorp",
       content: "IBEX Design transformed our brand identity completely. The new design system has improved our brand recognition by 40% and our marketing materials look incredibly professional.",
-      avatar: "/api/placeholder/48/48",
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80",
       rating: 5,
     },
     {
@@ -112,7 +112,7 @@ export default function Home() {
       role: "CEO",
       company: "StartupXYZ",
       content: "The team at IBEX Design understood our vision perfectly. They delivered a website that not only looks amazing but also converts visitors into customers effectively.",
-      avatar: "/api/placeholder/48/48",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80",
       rating: 5,
     },
     {
@@ -120,7 +120,7 @@ export default function Home() {
       role: "Creative Director",
       company: "Creative Agency",
       content: "Working with IBEX Design was a game-changer for our client projects. Their attention to detail and creative approach elevated our work to the next level.",
-      avatar: "/api/placeholder/48/48",
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80",
       rating: 5,
     },
   ];
