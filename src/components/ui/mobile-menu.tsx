@@ -84,14 +84,14 @@ export function MobileMenu({
       {/* Menu Panel */}
       <div
         className={cn(
-          "fixed inset-y-0 right-0 z-50 w-full max-w-sm transform transition-transform duration-300 ease-in-out md:hidden",
+          "fixed top-0 right-0 bottom-0 z-50 w-full max-w-sm transform transition-transform duration-300 ease-in-out md:hidden",
           isOpen ? "translate-x-0" : "translate-x-full",
           className
         )}
       >
-        <div className="flex h-full flex-col bg-white border-l border-gray-200 shadow-2xl">
+        <div className="flex h-full flex-col bg-white border-l border-gray-200 shadow-2xl overflow-hidden">
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-gray-200">
+          <div className="flex items-center justify-between p-4 border-b border-gray-200 flex-shrink-0">
             <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
             <Button
               variant="ghost"
@@ -105,7 +105,7 @@ export function MobileMenu({
           </div>
 
           {/* Content */}
-          <div className="flex-1 overflow-y-auto p-4">
+          <div className="flex-1 overflow-y-auto p-4 min-h-0">
             {children}
           </div>
         </div>
