@@ -98,7 +98,7 @@ export function MobileMenu({
       >
         <div className="flex h-full flex-col bg-white shadow-2xl">
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200 flex-shrink-0">
+          <div className="flex items-center justify-between p-6 border-b border-gray-200 flex-shrink-0 bg-white">
             <h2 className="text-xl font-semibold text-gray-900">Menu</h2>
             <Button
               variant="ghost"
@@ -112,7 +112,7 @@ export function MobileMenu({
           </div>
 
           {/* Content */}
-          <div className="flex-1 overflow-y-auto p-6">
+          <div className="flex-1 p-6 bg-white">
             {children}
           </div>
         </div>
