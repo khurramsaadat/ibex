@@ -67,7 +67,7 @@ export default function Home() {
     {
       title: "TechCorp Brand Identity",
       description: "Complete brand identity redesign for a leading technology company, including logo, guidelines, and marketing materials.",
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
       category: "Brand Identity",
       tags: ["Logo Design", "Brand Guidelines", "Corporate"],
       href: "/portfolio/techcorp-brand",
@@ -75,7 +75,7 @@ export default function Home() {
     {
       title: "E-commerce Platform UI",
       description: "Modern e-commerce platform design with focus on user experience and conversion optimization.",
-      image: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
       category: "Web Design",
       tags: ["UI/UX", "E-commerce", "Responsive"],
       href: "/portfolio/ecommerce-platform",
@@ -83,7 +83,7 @@ export default function Home() {
     {
       title: "Financial Services Report",
       description: "Annual report design for a major financial institution with data visualization and infographics.",
-      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
       category: "Corporate",
       tags: ["Annual Report", "Data Visualization", "Print"],
       href: "/portfolio/financial-report",
@@ -91,7 +91,7 @@ export default function Home() {
     {
       title: "Startup Mobile App",
       description: "Mobile application design for a fintech startup with focus on user onboarding and engagement.",
-      image: "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80",
       category: "Mobile App",
       tags: ["Mobile Design", "Fintech", "User Experience"],
       href: "/portfolio/startup-mobile-app",
