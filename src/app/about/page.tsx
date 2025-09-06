@@ -156,62 +156,62 @@ export default function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Sarah Johnson",
+                name: "Jessica Martinez",
                 role: "Creative Director",
                 expertise: ["Brand Strategy", "Visual Identity", "Team Leadership"],
                 experience: "8+ years",
-                bio: "Sarah leads our creative vision and ensures every project meets our high standards. She has a background in fine arts and has worked with Fortune 500 companies.",
-                avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+                bio: "Jessica leads our creative vision and ensures every project meets our high standards. She has a background in fine arts and has worked with Fortune 500 companies.",
+                avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
                 linkedin: "#",
                 twitter: "#"
               },
               {
-                name: "Michael Chen",
+                name: "James Wilson",
                 role: "Lead UI/UX Designer",
                 expertise: ["User Research", "Interface Design", "Prototyping"],
                 experience: "6+ years",
-                bio: "Michael specializes in creating intuitive user experiences. He has a background in psychology and human-computer interaction.",
-                avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+                bio: "James specializes in creating intuitive user experiences. He has a background in psychology and human-computer interaction.",
+                avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
                 linkedin: "#",
                 twitter: "#"
               },
               {
-                name: "Emily Rodriguez",
+                name: "Sofia Chen",
                 role: "Senior Graphic Designer",
                 expertise: ["Print Design", "Brand Guidelines", "Marketing Materials"],
                 experience: "7+ years",
-                bio: "Emily brings print design expertise to our team. She has worked with major brands and understands the nuances of both digital and print design.",
-                avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+                bio: "Sofia brings print design expertise to our team. She has worked with major brands and understands the nuances of both digital and print design.",
+                avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
                 linkedin: "#",
                 twitter: "#"
               },
               {
-                name: "David Kim",
+                name: "Ryan Park",
                 role: "Frontend Developer",
                 expertise: ["React", "TypeScript", "Web Performance"],
                 experience: "5+ years",
-                bio: "David bridges the gap between design and development, ensuring our designs come to life with pixel-perfect precision.",
-                avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+                bio: "Ryan bridges the gap between design and development, ensuring our designs come to life with pixel-perfect precision.",
+                avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
                 linkedin: "#",
                 twitter: "#"
               },
               {
-                name: "Lisa Wang",
+                name: "Amanda Foster",
                 role: "Brand Strategist",
                 expertise: ["Brand Strategy", "Market Research", "Competitive Analysis"],
                 experience: "6+ years",
-                bio: "Lisa helps our clients understand their market position and develop strategies that drive business growth through design.",
-                avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+                bio: "Amanda helps our clients understand their market position and develop strategies that drive business growth through design.",
+                avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
                 linkedin: "#",
                 twitter: "#"
               },
               {
-                name: "Alex Thompson",
+                name: "Marcus Johnson",
                 role: "Project Manager",
                 expertise: ["Project Management", "Client Relations", "Process Optimization"],
                 experience: "4+ years",
-                bio: "Alex ensures every project runs smoothly from start to finish, keeping clients informed and teams aligned throughout the process.",
-                avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+                bio: "Marcus ensures every project runs smoothly from start to finish, keeping clients informed and teams aligned throughout the process.",
+                avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
                 linkedin: "#",
                 twitter: "#"
               }
