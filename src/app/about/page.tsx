@@ -22,7 +22,7 @@ export default function About() {
   const tabItems = [
     {
       id: "story",
-      label: "Our Story",
+      label: "",
       content: (
         <div className="space-y-8">
           <div className="prose prose-lg max-w-none">
