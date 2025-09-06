@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ibex Design - Next.js with ShadCN UI",
-  description: "A modern Next.js application built with ShadCN UI and Tailwind CSS",
+  title: "Ibex Design",
+  description: "Transform Your Brand with Creative Excellence",
 };
 
 export default function RootLayout({
