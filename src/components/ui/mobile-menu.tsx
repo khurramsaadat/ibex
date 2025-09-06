@@ -50,6 +50,7 @@ export function MobileMenu({
     };
   }, [isOpen]);
 
+
   return (
     <>
       {/* Trigger Button */}
@@ -106,7 +107,6 @@ export function MobileMenu({
 
           {/* Content */}
           <div className="flex-1 overflow-y-auto p-4">
-            <div className="text-red-500 text-sm mb-4">Debug: Menu is open</div>
             {children}
           </div>
         </div>
