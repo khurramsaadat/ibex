@@ -62,7 +62,7 @@ export function MobileMenu({
           variant="ghost"
           size="sm"
           onClick={toggleMenu}
-          className="md:hidden"
+          className="md:hidden text-gray-700 hover:text-primary hover:bg-gray-100"
           aria-label="Toggle menu"
         >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
