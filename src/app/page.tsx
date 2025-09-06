@@ -67,7 +67,7 @@ export default function Home() {
     {
       title: "TechCorp Brand Identity",
       description: "Complete brand identity redesign for a leading technology company, including logo, guidelines, and marketing materials.",
-      image: "/api/placeholder/400/300",
+      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
       category: "Brand Identity",
       tags: ["Logo Design", "Brand Guidelines", "Corporate"],
       href: "/portfolio/techcorp-brand",
@@ -75,7 +75,7 @@ export default function Home() {
     {
       title: "E-commerce Platform UI",
       description: "Modern e-commerce platform design with focus on user experience and conversion optimization.",
-      image: "/api/placeholder/400/300",
+      image: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
       category: "Web Design",
       tags: ["UI/UX", "E-commerce", "Responsive"],
       href: "/portfolio/ecommerce-platform",
@@ -83,7 +83,7 @@ export default function Home() {
     {
       title: "Financial Services Report",
       description: "Annual report design for a major financial institution with data visualization and infographics.",
-      image: "/api/placeholder/400/300",
+      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
       category: "Corporate",
       tags: ["Annual Report", "Data Visualization", "Print"],
       href: "/portfolio/financial-report",
@@ -91,7 +91,7 @@ export default function Home() {
     {
       title: "Startup Mobile App",
       description: "Mobile application design for a fintech startup with focus on user onboarding and engagement.",
-      image: "/api/placeholder/400/300",
+      image: "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
       category: "Mobile App",
       tags: ["Mobile Design", "Fintech", "User Experience"],
       href: "/portfolio/startup-mobile-app",
