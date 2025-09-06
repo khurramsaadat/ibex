@@ -88,31 +88,32 @@ export function Header() {
           </div>
 
           {/* Mobile Menu */}
-          <MobileMenu>
-            <div className="space-y-4">
-              {/* Navigation Links */}
-              <div className="space-y-2">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary rounded-md transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+          <div className="md:hidden">
+            <MobileMenu>
+              <div className="space-y-4">
+                {/* Navigation Links */}
+                <div className="space-y-2">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary rounded-md transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+                
+                <div className="px-3 py-2">
+                  <Button asChild size="sm" className="w-full">
+                    <Link href="/contact">
+                      Get Started
+                    </Link>
+                  </Button>
+                </div>
               </div>
-              
-              
-              <div className="px-3 py-2">
-                <Button asChild size="sm" className="w-full">
-                  <Link href="/contact">
-                    Get Started
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </MobileMenu>
+            </MobileMenu>
+          </div>
         </div>
       </div>
     </header>
