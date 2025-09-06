@@ -152,7 +152,7 @@ export default function About() {
       expertise: ["Project Management", "Client Relations", "Process Optimization"],
       experience: "4+ years",
       bio: "Marcus ensures every project runs smoothly from start to finish, keeping clients informed and teams aligned throughout the process.",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
       linkedin: "#",
       twitter: "#"
     }
