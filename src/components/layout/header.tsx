@@ -90,22 +90,22 @@ export function Header() {
           {/* Mobile Menu */}
           <div className="md:hidden">
             <MobileMenu>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {/* Navigation Links */}
-                <div className="space-y-1">
+                <div className="space-y-0">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors"
+                      className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
                     >
                       {item.name}
                     </Link>
                   ))}
                 </div>
                 
-                <div className="pt-4 border-t border-gray-200">
-                  <Button asChild size="lg" className="w-full">
+                <div className="pt-3 border-t border-gray-200">
+                  <Button asChild size="sm" className="w-full">
                     <Link href="/contact">
                       Get Started
                     </Link>
