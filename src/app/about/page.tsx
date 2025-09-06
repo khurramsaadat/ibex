@@ -5,13 +5,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { 
-  Users, 
   Award, 
   Target, 
   Heart, 
   CheckCircle,
-  ArrowRight,
-  Star
+  ArrowRight
 } from "lucide-react";
 
 export default function About() {
@@ -235,14 +233,6 @@ export default function About() {
                           {skill}
                         </Badge>
                       ))}
-                    </div>
-                    <div className="flex justify-center space-x-4">
-                      <Button variant="ghost" size="sm" className="p-2">
-                        <Users className="h-4 w-4" />
-                      </Button>
-                      <Button variant="ghost" size="sm" className="p-2">
-                        <Star className="h-4 w-4" />
-                      </Button>
                     </div>
                   </CardContent>
                 </Card>
